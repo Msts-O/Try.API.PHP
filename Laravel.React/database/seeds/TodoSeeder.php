@@ -14,6 +14,6 @@ class TodoSeeder extends Seeder
         DB::table('todos')-> insert ([
             ['memo'=> 'test','status'=>'0'],
             ['memo'=> 'must','status'=>'1']
-            ]
-        )};
+            ]);
+    }
 }
