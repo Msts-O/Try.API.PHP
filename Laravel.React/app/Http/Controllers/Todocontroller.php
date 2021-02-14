@@ -41,7 +41,7 @@ class Todocontroller extends Controller
      */
     public function show(Todo $todo)
     {
-        return $todo();
+        return $todo;
     }
 
     /**
