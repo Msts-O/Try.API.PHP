@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::post('/register','')->name('register');
+
 Route::get('/', function () {
     return view('welcome');
 });
