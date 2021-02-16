@@ -8,7 +8,7 @@ jobs:
       - image: circkeci/mysql:8.0.22
     environment:
       - DB_CONNECTION:　mysql
-    working_directory: ~/Try.API.PHP
+    working_directory: ~/Laravel.React
 
     steps:
       - checkout
