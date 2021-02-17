@@ -32,8 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a6dde6a-5baa-4e85-b1e8-c066f2f39121" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel.React/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613100167007</updated>
       <workItem from="1613100168427" duration="5193000" />
-      <workItem from="1613228335381" duration="28648000" />
+      <workItem from="1613228335381" duration="30110000" />
     </task>
     <servers />
   </component>
@@ -109,6 +109,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="203" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1613379744453" />
+    <state x="594" y="379" key="NewPhpFileDialog" timestamp="1613549663495">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="594" y="379" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1613549663495" />
     <state x="276" y="88" key="SettingsEditor" timestamp="1613543603379">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
