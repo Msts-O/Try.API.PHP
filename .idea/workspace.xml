@@ -33,89 +33,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a6dde6a-5baa-4e85-b1e8-c066f2f39121" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/database/seeds/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/sass/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React.Laravel/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613100167007</updated>
       <workItem from="1613100168427" duration="5193000" />
-      <workItem from="1613228335381" duration="25276000" />
+      <workItem from="1613228335381" duration="25930000" />
     </task>
     <servers />
   </component>
