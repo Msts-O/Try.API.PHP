@@ -14,7 +14,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_PASSWORD: ''
 
-    working_directory: ~/Try.API.PHP
+    working_directory: ~/Laravel.React
     steps:
       - checkout
       - run:
@@ -34,7 +34,9 @@ jobs:
           keys:
             - composer-v1-{{ checksum "Laravel.React/composer.json" }}
             - composer-v1-
-      - run: composer install
+      - run:
+            working_directory: Laravel.React
+            command: composer install -n --prefer-dist
       - save_cache:
           key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
           paths:
@@ -56,9 +58,6 @@ jobs:
       - run: touch storage/testing.mysql
       - run: php artisan migrate --env=testing --database=mysql --force
 
-      # run tests with phpunit or codecept
-      #- run: ./vendor/bin/phpunit
-      # this example uses codecept but you're not limited to it
       - run: ./vendor/bin/codecept build
       - run: ./vendor/bin/codecept run --xml result.xml
       - store_test_results:
