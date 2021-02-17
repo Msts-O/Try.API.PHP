@@ -12,7 +12,7 @@ jobs:
           MYSQL_USER: 'root'
           MYSQL_DATABASE: React_API
           MYSQL_ROOT_PASSWORD: ''
-          MYSQL_PASSWORD: 'root'
+          MYSQL_PASSWORD: ''
 
     working_directory: ~/Laravel.React
 
@@ -35,7 +35,7 @@ jobs:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
             - composer-v1-
-      - run: mv .env.testing .env
+      - run: mv.env
       - run: composer install -n --ignore-platform-reqs
       - save_cache:
           key: composer-v1-{{ checksum "composer.lock" }}
