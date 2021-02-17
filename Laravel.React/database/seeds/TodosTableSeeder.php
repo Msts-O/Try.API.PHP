@@ -13,7 +13,7 @@ class TodosTableSeeder extends Seeder
     {
         DB::table('todos')->truncate();
         DB::table('todos')->insert([
-            ['memo' => '012345', 'status' => 0]
+            ['memo' => '12345', 'status' => 0]
         ]);
     }
 }
