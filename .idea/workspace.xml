@@ -33,7 +33,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9a6dde6a-5baa-4e85-b1e8-c066f2f39121" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613100167007</updated>
       <workItem from="1613100168427" duration="5193000" />
-      <workItem from="1613228335381" duration="30110000" />
+      <workItem from="1613228335381" duration="32151000" />
     </task>
     <servers />
   </component>
@@ -101,18 +100,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="567" y="126" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613373421468">
+    <state x="567" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613551391273">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="567" y="126" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1613373421468" />
-    <state x="512" y="203" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613379744453">
+    <state x="567" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1613551391273" />
+    <state x="512" y="203" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613550393977">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="512" y="203" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1613379744453" />
-    <state x="594" y="379" key="NewPhpFileDialog" timestamp="1613549663495">
+    <state x="512" y="203" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1613550393977" />
+    <state x="594" y="379" key="NewPhpFileDialog" timestamp="1613550445663">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="594" y="379" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1613549663495" />
+    <state x="594" y="379" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1613550445663" />
+    <state x="518" y="176" key="RollbackChangesDialog" timestamp="1613551461061">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="518" y="176" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1613551461061" />
     <state x="276" y="88" key="SettingsEditor" timestamp="1613543603379">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

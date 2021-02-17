@@ -14,7 +14,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_PASSWORD: ''
 
-    working_directory: ~/Laravel.React
+    working_directory: ~/src
 
     steps:
       - checkout
@@ -33,22 +33,22 @@ jobs:
       # composer cache
       - restore_cache:
           keys:
-            - composer-v1-{{ checksum "composer.json" }}
+            - composer-v1-{{ checksum "src/composer.json" }}
             - composer-v1-
-      - run: composer install
+      - run: composer install -n --prefer-dist
       - save_cache:
-          key: composer-v1-{{ checksum "composer.json" }}
+          key: composer-v1-{{ checksum "src/composer.json" }}
           paths:
             - vendor
 
       # node cache
       - restore_cache:
           keys:
-            - node-v4-{{ checksum "package.json" }}
+            - node-v4-{{ checksum "src/package.json" }}
             - node-v4-
       - run: npm install
       - save_cache:
-          key: node-v4-{{ checksum "package.json" }}
+          key: node-v4-{{ checksum "src/package.json" }}
           paths:
             - node_modules
             - ~/.yarn
