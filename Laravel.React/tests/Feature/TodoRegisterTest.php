@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Todo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -14,10 +15,12 @@ class TodoRegisterTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function test_MakingTest()  //testは最初にtestを頭文字につけて行う
     {
-        $response = $this->get('/');
+        $response = $this->post('api/todos',[
+            'memo' => 'test'
+        ]);
 
-        $response->assertStatus(200);
+        $response -> assertStatus(200);
     }
 }
