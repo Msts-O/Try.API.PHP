@@ -40,7 +40,8 @@ jobs:
           paths:
             - vendor
       - run:
-          name: Run PHPUnit
+          name: Run Unittest
+          working_directory: Laravel.React
           command: vendor/bin/phpunit
 
 workflows:
