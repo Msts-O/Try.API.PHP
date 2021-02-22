@@ -43,6 +43,7 @@ jobs:
             - vendor
       - run:
           name: Run PHPUnit
+          working_directory: Laravel.React
           command: vendor/bin/phpunit tests/Feature/TodoRegisterTest.php
 
       # node cache
