@@ -43,7 +43,7 @@ jobs:
             - vendor
       - run:
           name: Run PHPUnit
-          command: vendor/bin/phpunit
+          command: vendor/bin/phpunit tests/Feature/TodoRegisterTest.php
 
       # node cache
       - restore_cache:
