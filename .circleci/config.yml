@@ -41,6 +41,9 @@ jobs:
           key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
           paths:
             - vendor
+      - run:
+          name: Run PHPUnit
+          command: vendor/bin/phpunit
 
       # node cache
       - restore_cache:
