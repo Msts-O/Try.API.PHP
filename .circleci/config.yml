@@ -13,7 +13,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_PASSWORD: ''
 
-    working_directory: ~Try.API.PHP/Laravel.React
+    working_directory: ~/Laravel.React
     steps:
       - checkout
       - run:
