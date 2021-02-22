@@ -27,9 +27,9 @@ jobs:
             curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
             sudo apt-get install -y nodejs
       - run:
-          name: Run Unittest
+          name: Run PHPUnit
           working_directory: Laravel.React
-          command: app/tests/Feature/TodoRegisterTest.php
+          command: vendor/bin/phpunit
       # Download and cache dependencies
 
       # composer cache
