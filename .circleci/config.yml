@@ -12,7 +12,7 @@ jobs:
           MYSQL_USER: 'root'
           MYSQL_DATABASE: 'React_API'
           MYSQL_ROOT_PASSWORD: ''
-          MYSQL_PASSWORD: 'root'
+          MYSQL_PASSWORD: ''
 
     working_directory: ~/Laravel.React
     steps:
