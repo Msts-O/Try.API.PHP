@@ -27,7 +27,7 @@ jobs:
             curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
             sudo apt-get install -y nodejs
       - run:
-          name: Run PHPUnit
+          name: Run phpunit
           working_directory: Laravel.React
           command: ./vendor/bin/phpunit
       # Download and cache dependencies
