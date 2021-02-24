@@ -28,7 +28,7 @@ jobs:
             sudo apt-get install -y nodejs
       - run:
           name: Run Unit tests
-          command:  vendor/bin/phpunit
+          command:  /Laravel.React/vendor/bin/phpunit
       # Download and cache dependencies
 
       # composer cache
