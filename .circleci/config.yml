@@ -53,9 +53,8 @@ jobs:
             - node_modules
             - ~/.yarn
       - run:
-          name: Run Unittest
-          working_directory: ~/Laravel.React
-          command: ./vendor/bin/phpunit
+          name: Run PHPUnit
+          command: ./vendor/bin/phpunit --testbox
 
       # prepare the database
 
