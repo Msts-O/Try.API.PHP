@@ -54,7 +54,7 @@ jobs:
             - ~/.yarn
       - run:
           name: Run PHPUnit
-          command: ./vendor/bin/phpunit --testbox
+          command: vendor/bin/phpunit
 
       # prepare the database
 
