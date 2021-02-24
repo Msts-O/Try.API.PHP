@@ -26,10 +26,6 @@ jobs:
           command: |
             curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
             sudo apt-get install -y nodejs
-      - run:
-          name: Run Unittest
-          working_directory: ~/Laravel.React/app/tests/Feature
-          command: vendor/bin/phpunit
       # Download and cache dependencies
 
       # composer cache
@@ -56,6 +52,10 @@ jobs:
           paths:
             - node_modules
             - ~/.yarn
+      - run:
+          name: Run Unittest
+          working_directory: ~/Laravel.React/app/tests/Feature
+          command: vendor/bin/phpunit
 
       # prepare the database
 
