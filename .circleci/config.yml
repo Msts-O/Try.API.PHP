@@ -14,54 +14,25 @@ jobs:
           MYSQL_PASSWORD: ''
 
     working_directory: ~/Laravel.React
-    steps:
-      - checkout
-      - run:
-          name: Install MySQL driver
-          command: |
-            sudo docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo docker-php-ext-install zip bcmath pdo_mysql
-      - run:
-          name: Install Node
-          command: |
-            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-      - run:
-          working_directory: ~/Laravel.React
-          name: Run Unit tests
-          command:  ./vendor/bin/phpunit
-      # Download and cache dependencies
-
-      # composer cache
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "Laravel.React/composer.json" }}
-            - composer-v1-
-      - run:
-          working_directory: Laravel.React
-          command: composer install -n --prefer-dist
-      - save_cache:
-          key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
-          paths:
-            - ./vendor
-
-      # node cache
-      - restore_cache:
-          keys:
-            - node-v4-{{ checksum "Laravel.React/package.json" }}
-            - node-v4-
-      - run: npm install
-      - save_cache:
-          key: node-v4-{{ checksum "Laravel.React/package.json" }}
-          paths:
-            - node_modules
-            - ~/.yarn
-
-      # prepare the database
-
-
-workflows:
-  version: 2
-  workflow:
-    jobs:
-      - test
+      steps:
+          - checkout
+            - run:
+            name: Update apt-get
+            command: sudo apt-get update
+              - run:
+                  name: Docker php extensions install
+                  command: sudo docker-php-ext-install pdo_mysql
+              - restore_cache:
+                  keys:
+                    - v1-dependencies-{{ checksum "composer.json" }}
+                    - v1-dependencies-
+              - run:
+                  name: Install PHP libraries
+                  command: composer install -n --prefer-dist
+              - save_cache:
+                  paths:
+                    - ./vendor
+                  key: v1-dependencies-{{ checksum "composer.json" }}
+              - run:
+                  name: Run PHPUnit
+                  command: vendor/bin/phpunit
