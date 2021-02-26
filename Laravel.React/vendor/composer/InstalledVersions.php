@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '526ffb29cae3c9852ca1ac2b3b6ae31780cd0fa9',
+    'reference' => '3d1d5ae4e343d6d5cc83d186eb47c471601f1a00',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -445,7 +445,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '526ffb29cae3c9852ca1ac2b3b6ae31780cd0fa9',
+      'reference' => '3d1d5ae4e343d6d5cc83d186eb47c471601f1a00',
     ),
     'laravel/tinker' => 
     array (
@@ -485,12 +485,12 @@ private static $installed = array (
     ),
     'mockery/mockery' => 
     array (
-      'pretty_version' => '1.3.3',
-      'version' => '1.3.3.0',
+      'pretty_version' => '1.3.4',
+      'version' => '1.3.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '60fa2f67f6e4d3634bb4a45ff3171fa52215800d',
+      'reference' => '31467aeb3ca3188158613322d66df81cedd86626',
     ),
     'monolog/monolog' => 
     array (
@@ -561,12 +561,12 @@ private static $installed = array (
     ),
     'phar-io/version' => 
     array (
-      'pretty_version' => '3.0.4',
-      'version' => '3.0.4.0',
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e4782611070e50613683d2b9a57730e9a3ba5451',
+      'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -615,12 +615,12 @@ private static $installed = array (
     ),
     'phpstan/phpstan' => 
     array (
-      'pretty_version' => '0.12.78',
-      'version' => '0.12.78.0',
+      'pretty_version' => '0.12.79',
+      'version' => '0.12.79.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'eecce8d2ee3cac6769f37b4cb1998b2715f82984',
+      'reference' => 'dd7769915648b704b9bd12925994457f1c2c8442',
     ),
     'phpunit/php-code-coverage' => 
     array (
@@ -753,8 +753,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
