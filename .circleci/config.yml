@@ -28,18 +28,21 @@ jobs:
             sudo apt-get install -y nodejs
       # Download and cache dependencies
 
-      # composer cache
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "Laravel.React/composer.json" }}
-            - composer-v1-
-      - run:
-          working_directory: Laravel.React
-          command: composer install -n --prefer-dist
-      - save_cache:
-          key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
-          paths:
-            - ./vendor
+            - restore_cache:
+                keys:
+                  - v1-dependencies-{{ checksum "composer.json" }}
+                  - v1-dependencies-
+            - run:
+                name: Install PHP libraries
+                command: composer install -n --prefer-dist
+
+            - save_cache:
+                paths:
+                  - ./vendor
+                key: v1-dependencies-{{ checksum "composer.json" }}
+            - run:
+                name: Run PHPUnit
+                command: vendor/bin/phpunit
 
       # node cache
       - restore_cache:
@@ -52,9 +55,6 @@ jobs:
           paths:
             - node_modules
             - ~/.yarn
-      - run:
-          name: Run PHPUnit
-          command: vendor/bin/phpunit
 
       # prepare the database
 
