@@ -39,7 +39,7 @@ jobs:
       - save_cache:
           key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
           paths:
-            - vendor
+            - ./vendor
 
       # node cache
       - restore_cache:
