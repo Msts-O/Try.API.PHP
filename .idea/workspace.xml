@@ -32,30 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a6dde6a-5baa-4e85-b1e8-c066f2f39121" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery/LegacyMockInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery/LegacyMockInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery/Reflector.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/mockery/mockery/library/Mockery/Reflector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/PreReleaseSuffix.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/PreReleaseSuffix.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/Version.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/VersionConstraintParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/VersionConstraintParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/VersionConstraintValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/VersionConstraintValue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/GreaterThanOrEqualToVersionConstraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/GreaterThanOrEqualToVersionConstraint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/SpecificMajorAndMinorVersionConstraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/SpecificMajorAndMinorVersionConstraint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/SpecificMajorVersionConstraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phar-io/version/src/constraints/SpecificMajorVersionConstraint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/phpstan.phar" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/phpstan.phar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/phpstan.phar.asc" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel.React/vendor/phpstan/phpstan/phpstan.phar.asc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +66,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -105,7 +83,7 @@
       <updated>1613100167007</updated>
       <workItem from="1613100168427" duration="5193000" />
       <workItem from="1613228335381" duration="62494000" />
-      <workItem from="1614133587273" duration="7689000" />
+      <workItem from="1614133587273" duration="9433000" />
     </task>
     <servers />
   </component>
@@ -125,6 +103,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="423" y="131" key="#CLI_Interpreters" timestamp="1614313822017">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="423" y="131" key="#CLI_Interpreters/0.23.1440.877@0.23.1440.877" timestamp="1614313822017" />
     <state x="567" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613704153191">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -141,10 +123,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="518" y="176" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1613704595979" />
-    <state x="276" y="88" key="SettingsEditor" timestamp="1613543603379">
+    <state x="380" y="133" key="SettingsEditor" timestamp="1614314005432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="276" y="88" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1613543603379" />
+    <state x="380" y="133" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1614314005432" />
     <state x="439" y="207" width="670" height="676" key="search.everywhere.popup" timestamp="1613366915627">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

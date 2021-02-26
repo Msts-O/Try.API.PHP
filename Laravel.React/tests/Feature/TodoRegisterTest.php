@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+require_once("vendor/autoload.php");
 use App\Todo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
