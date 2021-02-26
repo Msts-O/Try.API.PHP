@@ -28,21 +28,21 @@ jobs:
             sudo apt-get install -y nodejs
       # Download and cache dependencies
 
-            - restore_cache:
-                keys:
-                  - v1-dependencies-{{ checksum "composer.json" }}
-                  - v1-dependencies-
-            - run:
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+          - run:
                 name: Install PHP libraries
                 command: composer install -n --prefer-dist
 
-            - save_cache:
-                paths:
-                  - ./vendor
+      - save_cache:
+          paths:
+                - ./vendor
                 key: v1-dependencies-{{ checksum "composer.json" }}
-            - run:
-                name: Run PHPUnit
-                command: vendor/bin/phpunit
+       - run:
+            name: Run PHPUnit
+            command: vendor/bin/phpunit
 
       # node cache
       - restore_cache:
