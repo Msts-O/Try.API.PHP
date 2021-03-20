@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'dcfd2ae3f8966d7bdf8c7928c1293b4cd7cced52',
+    'reference' => 'cac2e65b328fac907143088615b4a55412bdbb81',
     'name' => 'ogiwaramasatoshi/laravel.react',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'dcfd2ae3f8966d7bdf8c7928c1293b4cd7cced52',
+      'reference' => 'cac2e65b328fac907143088615b4a55412bdbb81',
     ),
   ),
 );
