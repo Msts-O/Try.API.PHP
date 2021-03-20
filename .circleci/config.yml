@@ -52,9 +52,6 @@ jobs:
           paths:
             - node_modules
             - ~/.yarn
-      - run:
-          name: Run PHPUnit
-          command: vendor/bin/phpunit
 
       # prepare the database
 
