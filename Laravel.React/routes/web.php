@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/todo', 'Todocontroller@todo');
+//Route::post('/todo', 'Todocontroller@todo');

@@ -1,4 +1,3 @@
-
 version: 2
 jobs:
   test:
@@ -35,12 +34,12 @@ jobs:
             - composer-v1-{{ checksum "Laravel.React/composer.json" }}
             - composer-v1-
       - run:
-            working_directory: Laravel.React
-            command: composer install -n --prefer-dist
+          working_directory: Laravel.React
+          command: composer install -n --prefer-dist
       - save_cache:
           key: composer-v1-{{ checksum "Laravel.React/composer.json" }}
           paths:
-            - vendor
+            - ./vendor
 
       # node cache
       - restore_cache:
