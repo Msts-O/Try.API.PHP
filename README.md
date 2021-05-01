@@ -1,4 +1,4 @@
-Sample PHP App
+PHP App
 ==============
 
 This is a sample app for the [API](https://github.com/TiendaNube/api-docs) of [Nuvem Shop](https://www.nuvemshop.com.br) / [Tienda Nube](https://www.tiendanube.com)  using the official [SDK for PHP](https://github.com/TiendaNube/tiendanube-php-sdk).
