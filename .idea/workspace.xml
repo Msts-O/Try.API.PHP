@@ -2,94 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc3436fd-fe7a-4b0f-931c-fcbb01d94b93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PHP..iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/match/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +37,12 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/laravel_bbs" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,7 +54,7 @@
       <workItem from="1619952626014" duration="13671000" />
       <workItem from="1621417344092" duration="2914000" />
       <workItem from="1621441264767" duration="6365000" />
-      <workItem from="1621488399923" duration="2945000" />
+      <workItem from="1621488399923" duration="5998000" />
     </task>
     <servers />
   </component>
