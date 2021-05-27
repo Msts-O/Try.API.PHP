@@ -14,11 +14,12 @@ class ArticlesTable extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');  //automatically registered
             $table->string('title',30)->nullable();
             $table->timestamp('date');
             $table->text('description')->nullable();
             $table->string('password',20)->nullable();
+
         });
     }
 

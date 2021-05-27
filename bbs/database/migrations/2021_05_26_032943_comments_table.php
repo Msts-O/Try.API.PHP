@@ -14,13 +14,16 @@ class CommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->unsignedInteger('post_id');
+            $table->integer('article_id')->unsigned();
             $table->text('description')->nullable();
             $table->timestamps();
-            $table->integer('article_id');
 
-//            $table->foreign('article_id')->references('id')->on('articles');
+            $table->foreign('article_id')
+                  ->references('id')
+                  ->on('articles')
+                  ->onDelete('cascade');
         });
     }
 
