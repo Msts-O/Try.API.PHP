@@ -13,14 +13,22 @@ class RepliesTable extends Migration
      */
     public function up()
     {
-        //
-    }
+        Schema::create('replies', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('article_id')->unsigned();
+            $table->integer('comment_id')->unsigned();
+            $table->string('user_name');
+            $table->text('description')->nullable();
+            $table->timestamps();
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+            $table->foreign('comment_id')
+                  ->references('id')
+                  ->on('comments')
+                  ->onDelete('cascade');
+        });
+    }
+    
     public function down()
     {
         //
