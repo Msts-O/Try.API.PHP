@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $articles = Article::orderBy('created_at', 'desc')->paginate(10);
@@ -18,25 +13,19 @@ class ArticleController extends Controller
         return view('articles.index', ['posts' => $articles]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('articles.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $params = $request->validate([
+            'title' => 'required|max:50',
+            'description' => 'required|max:2000',
+        ]);
+
+        return view('articles.create');
     }
 
     /**
