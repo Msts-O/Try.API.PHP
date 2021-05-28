@@ -13,7 +13,7 @@
 |
 */
 
-Route::get('/articles', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
