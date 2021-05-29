@@ -1,32 +1,50 @@
-<DOCTYPE HTML>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>@yield('title')｜magicmissile.info</title>
-        <meta name="description" itemprop="description" content="@yield('description')">
-        <meta name="keywords" itemprop="keywords" content="@yield('keywords')">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's is the news ?</title>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-        <!-- Custom styles for this template -->
-        <link href="/css/bbs/sticky-footer.css" rel="stylesheet">
-
-        @yield('pageCss')
-    </head>
-    <body>
-
-    @yield('header')
-
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<header class="navbar navbar-dark bg-dark">
     <div class="container">
-        @yield('content')
-    </div><!--//container-->
+        <a class="navbar-brand" href="{{ url('/articles') }}">
+           What's is the news ?
+        </a>
+        <div class="my-navbar-control">
+            @if(Auth::check())
+                <span class="text-white">ようこそ, {{ Auth::user()->name }}さん</span>
+                ｜
+                <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @else
+                <a class="my-navbar-item" href="#">ログイン</a>
+                ｜
+                <a class="my-navbar-item" href="#">会員登録</a>
+            @endif
+        </div>
+    </div>
+</header>
 
-    @yield('footer')
+<div>
+    @yield('content')
+</div>
 
-    </body>
-    </html>
+@if(Auth::check())
+    <script>
+        document.getElementById('logout').addEventListener('click',function(event){
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        });
+    </script>
+@endif
+
+</body>
+</html>

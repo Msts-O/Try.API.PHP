@@ -1,4 +1,5 @@
-@section('content')
+@extends('layouts/header.blade.php')
+@section('header.blade.php')
     <div class="container mt-4">
         <div class="border p-4">
             <h1 class="h5 mb-4">
