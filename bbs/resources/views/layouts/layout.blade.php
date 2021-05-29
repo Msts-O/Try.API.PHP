@@ -25,9 +25,9 @@
                     @csrf
                 </form>
             @else
-                <a class="my-navbar-item" href="#">ログイン</a>
+                <a class="my-navbar-item" href="#">Author</a>
                 ｜
-                <a class="my-navbar-item" href="#">会員登録</a>
+                <a class="my-navbar-item" href="http://127.0.0.1:8001/articles">home</a>
             @endif
         </div>
     </div>
