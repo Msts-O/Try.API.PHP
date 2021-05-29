@@ -16,10 +16,8 @@ class ArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');  //automatically registered
             $table->string('title',30)->nullable();
-            $table->timestamp('date');
             $table->text('description')->nullable();
-            $table->string('password',20)->nullable();
-
+            $table->timestamps('');
         });
     }
 

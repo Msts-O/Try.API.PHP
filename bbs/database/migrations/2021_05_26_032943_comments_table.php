@@ -17,6 +17,7 @@ class CommentsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('article_id')->unsigned();
+            $table->string('user_name');
             $table->text('description')->nullable();
             $table->timestamps();
 
