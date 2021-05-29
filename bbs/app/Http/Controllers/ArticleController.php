@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Article;
 
 class ArticleController extends Controller
 {
@@ -28,48 +30,42 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(Request $request,$article_id)
     {
-        //
+        $article = Article::findOrFail($article_id);
+
+        return view('articles.show', [
+            'article' => $article,
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit($article_id)
     {
-        //
+        $article = Article::findOrFail($article_id);
+
+        return view('articles.show', [
+            'article' => $article,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $params = [
+            'title' => $request->title,
+            'title' => $request->description
+        ];
+
+        $article=new Article;
+        $article->fill($article)->save();
+
+        return redirect('/articles')->with('message', 'edit your article');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy($article_id)
     {
-        //
+        $article=Article::findOrFail($article_id);
+        $article->delete();
+
+        return redirect('/articles')->with('message','delete your article');
     }
 }
