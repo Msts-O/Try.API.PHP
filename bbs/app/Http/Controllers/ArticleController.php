@@ -22,12 +22,15 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        $params = $request->validate([
-            'title' => 'required|max:50',
-            'description' => 'required|max:2000',
-        ]);
+        $savedata = [
+            'title' => $request->title,
+            'description' => $request->description
+        ];
 
-        return view('articles.create');
+        $article = new Article;
+        $article->fill($savedata)->save();
+
+        return redirect('/articles')->with('message', 'new Article posted');
     }
 
     public function show(Request $request,$article_id)

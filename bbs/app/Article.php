@@ -8,7 +8,7 @@ class Article extends Model
 {
     protected $fillable = [
         'title',
-        'description',
+        'description'
     ];
 
     public function comments()
@@ -20,5 +20,9 @@ class Article extends Model
     {
         return $this->hasMany('App\Reply');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
-

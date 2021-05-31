@@ -21,3 +21,7 @@ Route::resource('/articles', App\Http\Controllers\ArticleController::class);
 //from v.8.0, second argument needs to pass the class file(app\http\controllers\〜controller)
 Route::resource('/comments', App\Http\Controllers\CommentController::class,['only' => ['store','create','show','update','destroy']]);
 Route::resource('/replies', App\Http\Controllers\ReplyController::class,['only' => ['store','create','show','update','destroy']]);
+
+
+Auth::routes();
+
