@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Article;
+use App\User;
+use App\Http\Requests\ArticleRequest;
+
 
 class ArticleController extends Controller
 {
@@ -20,14 +23,16 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        $params = $request->validate([
-            'title' => 'required|max:50',
-            'description' => 'required|max:2000',
-        ]);
+      $article = new Article;
 
-        return view('articles.create');
+      $article->title = $request->title;
+      $article->body  = $request->body;
+
+      $article->save();
+
+      return redirect('articles')->with('message', 'post your article');
     }
 
     public function show(Request $request,$article_id)
@@ -43,28 +48,33 @@ class ArticleController extends Controller
     {
         $article = Article::findOrFail($article_id);
 
-        return view('articles.show', [
+        return view('articles.edit', [
             'article' => $article,
         ]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request,$article_id)
     {
-        $params = [
-            'title' => $request->title,
-            'title' => $request->description
-        ];
+        $article = Article::findOrFail($article_id);
 
-        $article=new Article;
-        $article->fill($article)->save();
 
-        return redirect('/articles')->with('message', 'edit your article');
+        $article->title = $request->title;
+        $article->body  = $request->body;
+
+        $article->update();
+
+        return redirect('articles')->with('message', 'edit your article');
     }
 
     public function destroy($article_id)
     {
         $article=Article::findOrFail($article_id);
         $article->delete();
+
+        \DB::transaction(function()use ($article){
+            $article->comments()->delete();
+            $article->delete();
+        });
 
         return redirect('/articles')->with('message','delete your article');
     }

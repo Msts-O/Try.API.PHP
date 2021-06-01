@@ -16,7 +16,7 @@ class ArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');  //automatically registered
             $table->string('title',30)->nullable();
-            $table->text('description')->nullable();
+            $table->text('body')->nullable();
             $table->timestamps('');
         });
     }
@@ -29,6 +29,6 @@ class ArticlesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('articles');
     }
 }
