@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Requests;
-
 use Illuminate\Foundation\Http\FormRequest;
 
 class ArticleRequest extends FormRequest
@@ -13,7 +12,7 @@ class ArticleRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +23,8 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:30',
-            'description' => 'required|max:300',
+            'title' => ['required','max:30'],
+            'body' => ['required','max:300'],
         ];
     }
 
@@ -34,8 +33,8 @@ class ArticleRequest extends FormRequest
         return [
             'title.required' => 'タイトルを入力してください',
             'title.max' => 'タイトルは30文字以内で入力してください',
-            'description.required' => '投稿内容を入力してください',
-            'description.max' => '投稿内容は300文字以内で入力してください',
+            'body.required' => '投稿内容を入力してください',
+            'body.max' => '投稿内容は300文字以内で入力してください'
         ];
      }
-}    
+}

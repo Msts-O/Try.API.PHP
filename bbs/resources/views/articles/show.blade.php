@@ -28,9 +28,9 @@
 
      <div class="form-group">
       <label for="body">Content</label>
-    <textarea id="body" name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" rows="4">{{ old('body') }}</textarea>
-     @if($errors->has('body'))
-       <div class="invalid-feedback">{{ $errors->first('body') }}</div>
+    <textarea id="body" name="body" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" rows="4">{{ old('description') }}</textarea>
+     @if($errors->has('description'))
+       <div class="invalid-feedback">{{ $errors->first('description') }}</div>
      @endif
      </div>
       <div class="mt-4">
@@ -40,7 +40,7 @@
    @forelse($article->comments as $comment)
      <div class="border-top p-4">
       <time class="text-secondary">{{ $comment->created_at->format('Y.m.d H:i') }}</time>
-       <p class="mt-2">{!! nl2br(e($comment->body)) !!}</p>
+       <p class="mt-2">{!! nl2br(e($comment->comment)) !!}</p>
         <span class="h6 mb-4">Posted by:{{ $comment_user_name[$loop->index] }}</span>
        @if(optional(Auth::user())->id === $comment->user_id)
         <a class="btn btn-primary" href="{{ route('comments.edit', ['comment' => $comment]) }}">Edit</a>

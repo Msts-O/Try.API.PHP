@@ -13,7 +13,7 @@ class CommentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class CommentRequest extends FormRequest
     {
         return [
             'name' => 'required|max:30',
-            'description' => 'required|max:280',
+            'description' => 'required|max:30',
         ];
     }
 

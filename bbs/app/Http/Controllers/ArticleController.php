@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Article;
+use App\User;
+use App\Http\Requests\ArticleRequest;
+
 
 class ArticleController extends Controller
 {
@@ -20,17 +23,16 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        $savedata = [
-            'title' => $request->title,
-            'description' => $request->description
-        ];
+      $article = new Article;
 
-        $article = new Article;
-        $article->fill($savedata)->save();
+      $article->title = $request->title;
+      $article->body  = $request->body;
 
-        return redirect('/articles')->with('message', 'new Article posted');
+      $article->save();
+
+      return redirect('articles')->with('message', 'post your article');
     }
 
     public function show(Request $request,$article_id)
@@ -45,29 +47,36 @@ class ArticleController extends Controller
     public function edit($article_id)
     {
         $article = Article::findOrFail($article_id);
+        $this->authorize('update', $article);
 
-        return view('articles.show', [
+        return view('articles.edit', [
             'article' => $article,
         ]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request,$article_id)
     {
-        $params = [
-            'title' => $request->title,
-            'title' => $request->description
-        ];
+        $params =  $request->validate([
+            'title' =>'required|max:30',
+            'body' => 'required|max:300',
+        ]);
 
-        $article=new Article;
-        $article->fill($article)->save();
+        $article = Article::findOrFail($article_id);
+        $this->authorize('update', $article);
+        $article->save();
 
-        return redirect('/articles')->with('message', 'edit your article');
+        return redirect('articles.show')->with('message', 'edit your article');
     }
 
     public function destroy($article_id)
     {
         $article=Article::findOrFail($article_id);
         $article->delete();
+
+        \DB::transaction(function()use ($article){
+            $article->comments()->delete();
+            $article->delete();
+        });
 
         return redirect('/articles')->with('message','delete your article');
     }
