@@ -47,7 +47,6 @@ class ArticleController extends Controller
     public function edit($article_id)
     {
         $article = Article::findOrFail($article_id);
-        $this->authorize('update', $article);
 
         return view('articles.edit', [
             'article' => $article,
@@ -56,16 +55,15 @@ class ArticleController extends Controller
 
     public function update(Request $request,$article_id)
     {
-        $params =  $request->validate([
-            'title' =>'required|max:30',
-            'body' => 'required|max:300',
-        ]);
-
         $article = Article::findOrFail($article_id);
-        $this->authorize('update', $article);
-        $article->save();
 
-        return redirect('articles.show')->with('message', 'edit your article');
+
+        $article->title = $request->title;
+        $article->body  = $request->body;
+
+        $article->update();
+
+        return redirect('articles')->with('message', 'edit your article');
     }
 
     public function destroy($article_id)

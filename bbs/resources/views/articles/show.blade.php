@@ -19,7 +19,7 @@
   </div>
 
   <h1 class="h5 mb-4">{{ $article->title }}</h1>
-   <p class="mb-5">{!! nl2br(e($article->description)) !!}</p>
+   <p class="mb-5">{!! nl2br(e($article->body)) !!}</p>
   <section>
     <h2 class="h5 mb-4">Comments</h2>
 　　　<form class="mb-4" method="POST" action="{{ route('comments.store') }}">
@@ -28,8 +28,8 @@
 
      <div class="form-group">
       <label for="body">Content</label>
-    <textarea id="body" name="body" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" rows="4">{{ old('description') }}</textarea>
-     @if($errors->has('description'))
+    <textarea id="body" name="body" class="form-control {{ $errors->has('') ? 'is-invalid' : '' }}" rows="4">{{ old('description') }}</textarea>
+     @if($errors->has('body'))
        <div class="invalid-feedback">{{ $errors->first('description') }}</div>
      @endif
      </div>

@@ -1,15 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
- <div class="container mt-4">
-  <div class="border p-4">
-   <div class="mb-4 text-left">
-    <a class="btn btn-success" href="{{ route('articles.index') }}">Back to Home</a>
-   </div>   
-
- <div class="container mt-4">
-  <div class="border p-4">
-   <h1 class="h5 mb-4">Edit an Article</h1>
+    <div class="container mt-4">
+        <div class="border p-4">
+            <h1 class="h5 mb-4">Edit an Article</h1>
       <form method="POST" action="{{ route('articles.update', ['article' => $article]) }}">
     @csrf
     @method('PUT')
@@ -27,7 +21,7 @@
 
      <div class="form-group">
       <label for="body">Content</label>
-      <textarea id="body" name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" rows="4">{{ old('body') ?: $article->description }}</textarea>
+      <textarea id="body" name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" rows="4">{{ old('body') ?: $article->body }}</textarea>
        @if ($errors->has('body'))
         <div class="invalid-feedback">
          {{ $errors->first('body') }}
