@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>What's is the news ?</title>
-
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,7 +12,7 @@
 <body>
 <header class="navbar navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/articles') }}">
+        <a class="navbar-brand" href="{{ url('articles') }}">
            What's is the news ?
         </a>
         <div class="my-navbar-control">
@@ -25,9 +24,9 @@
                     @csrf
                 </form>
             @else
-                <a class="my-navbar-item" href="#">Author</a>
-                ｜
-                <a class="my-navbar-item" href="http://127.0.0.1:8001/articles">home</a>
+                <a class="my-navbar-item" href="{{ url('articles') }}">Author</a>
+           　　　&nbsp;
+                <a class="my-navbar-item" href="{{ url('articles') }}">home</a>
             @endif
         </div>
     </div>
