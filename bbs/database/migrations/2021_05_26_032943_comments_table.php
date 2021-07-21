@@ -9,11 +9,10 @@ class CommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('article_id')->unsigned();
             $table->string('name',30)->nullable();
-            $table->text('body')->nullable();
+            $table->text('comment')->nullable();
             $table->timestamps('');
 
             $table->foreign('article_id')

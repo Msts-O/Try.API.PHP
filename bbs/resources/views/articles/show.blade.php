@@ -19,48 +19,58 @@
       @endif
     </div>
 
-      <h1 class="h5 mb-4">{{ $article->title }}</h1>
-       <p class="mb-5">{!! nl2br(e($article->body)) !!}</p>
-       <section>
-        <h2 class="h5 mb-4">Comments</h2>
-        <form class="mb-4" method="POST" action="{{ route('articles.index') }}">
-       @csrf
-        <input name="article_id" type="hidden" value="{{ $article->id }}">
 
-{{-- comment_name--}}
-       <form class="mb-4" method="POST" action="{{ route('comments.store')}}">
-       @csrf
-        <div class="form-group">
-         <label for="subject">Your Name</label>
-         <input id="name" name="name" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" value="{{ old('name') }}" type="text">
-          @if ($errors->has('name'))
-            <div class="invalid-feedback">
-              {{ $errors->first('name') }}
-            </div>
-          @endif
+     <h1 class="h5 mb-4">{{ $article->title }}</h1>
+      <p class="mb-5">{!! nl2br(e($article->body)) !!}</p>
+
+
+      @forelse($article->comments as $comment)
+       <div class="border-top p-4">
+        <time class="text-secondary">
+        　{{ $comment->created_at->format('Y.m.d H:i') }}
+        </time>
+          <p class="mt-2">
+            {!! nl2br(e($comment->comment)) !!}
+         　</p>
         </div>
 
-        <div class="form-group">
-         <label for="body">Content</label>
-         <textarea id="body" name="body" class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}" rows="4">{{ old('body') }}</textarea>
-          @if($errors->has('body'))
-           <div class="invalid-feedback">{{ $errors->first('body') }}</div>
-          @endif
+        @empty
+         <p>コメントはまだありません。</p>
+      　@endforelse
+
+         <form class="mb-4" method="POST" action="{{ route('comment.store'),['comment' => $comment]}}">
+          @csrf
+
+         <input name="article_id" type="hidden" value="{{ $article->id }}">
+
+          <div class="form-group">
+           <label for="subject">Name</label>
+
+         <input id="name" name="name" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" value="{{ old('name') }}" type="text">
+            @if ($errors->has('name'))
+              <div class="invalid-feedback">
+                {{ $errors->first('name') }}
+              </div>
+            @endif
            </div>
+
+          <div class="form-group">
+           <label for="comment">Content</label>
+
+           <textarea id="comment" name="comment" class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}" rows="4">{{ old('comment') }}</textarea>
+             @if ($errors->has('comment'))
+               <div class="invalid-feedback">
+                {{ $errors->first('comment') }}
+               </div>
+             @endif
+           </div>
+
            <div class="mt-4">
-             <button type="submit" class="btn btn-primary">To comment here.</button>
+             <button type="submit" class="btn btn-primary">To comment here! </button>
            </div>
-         </form>
-            
-
-         @if (session('comment_status'))
-          <div class="alert alert-success mt-4 mb-4">
-            {{ session('comment_status') }}
-          </div>
-         @endif
-      </div>
-     </div>
+          </form>
+         </div>
+    </div>
 @endsection
-
 
 

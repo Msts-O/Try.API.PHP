@@ -10,7 +10,7 @@ class Comment extends Model
     protected $fillable = [
         'article_id',
         'name',
-        'body',
+        'comment',
     ];
     public function article()
     {

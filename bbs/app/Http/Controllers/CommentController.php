@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\CommentRequest;
-use App\Comment;
 use App\Article;
+use App\Comment;
+
 
 
 class CommentController extends Controller
@@ -17,28 +19,52 @@ class CommentController extends Controller
 
         $params = [
             'article_id' => 'required|exists:articles,id',
-            'name' => $request->name,
-            'body' => $request->body,
+            'name' => 'required|max:30',
+            'comment' => 'required|max:300',
         ];
         $article = Article::findOrFail($params['article_id']);
         $comment = new Comment();
-        $comment->fill($params)->save();
+        $comment->comment = $request->comment;
 
-        return view('articles.show', ['article' =>$article ]);
+        $article->comment()->save($comment);
+
+        return redirect()->route('articles.show', ['article' => $article]);
     }
 
     public function edit($id)
     {
-        //
+        $comment = Comment::findOrFail($id);
+
+        return view('comment.edit', [
+            'comment' => $comment,
+        ]);
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $params = $request->validate([
+            'name' => 'required|max:30',
+            'body' => 'required|max:300',
+        ]);
+
+        $comment = comment::findOrFail($id);
+
+        $this->authorize('update', $comment);
+
+        $comment->fill($params)->save();
+        return redirect()->route('articles.show', ['article' => $comment->article_id]);
     }
 
     public function destroy($id)
     {
-        //
+        $comment = Comment::findOrFail($id);
+
+        $this->authorize('delete', $comment);
+
+        \DB::transaction(function()use ($comment){
+            $comment->delete();
+        });
+
+        return redirect()->route('articles');
     }
 }

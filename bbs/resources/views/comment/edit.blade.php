@@ -5,7 +5,7 @@
         <div class="border p-4">
             <h1 class="h5 mb-4">Edit your comment</h1>
 
-     <form method="POST" action="{{ route('comments.edit', ['comment' => $comment]) }}">
+     <form method="POST" action="{{ route('comment.store', ['comment' => $comment]) }}">
     @csrf
     @method('PUT')
 
