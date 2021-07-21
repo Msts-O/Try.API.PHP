@@ -2,85 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\CommentRequest;
+use App\Article;
 use App\Comment;
+
+
 
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function store(CommentRequest $request)
     {
-        //
+
+        $params = [
+            'article_id' => 'required|exists:articles,id',
+            'name' => 'required|max:30',
+            'comment' => 'required|max:300',
+        ];
+        $article = Article::findOrFail($params['article_id']);
+        $comment = new Comment();
+        $comment->comment = $request->comment;
+
+        $article->comment()->save($comment);
+
+        return redirect()->route('articles.show', ['article' => $article]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $comment = Comment::findOrFail($id);
+
+        return view('comment.edit', [
+            'comment' => $comment,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $params = $request->validate([
+            'name' => 'required|max:30',
+            'body' => 'required|max:300',
+        ]);
+
+        $comment = comment::findOrFail($id);
+
+        $this->authorize('update', $comment);
+
+        $comment->fill($params)->save();
+        return redirect()->route('articles.show', ['article' => $comment->article_id]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $comment = Comment::findOrFail($id);
+
+        $this->authorize('delete', $comment);
+
+        \DB::transaction(function()use ($comment){
+            $comment->delete();
+        });
+
+        return redirect()->route('articles');
     }
 }

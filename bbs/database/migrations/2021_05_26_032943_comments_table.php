@@ -6,20 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 class CommentsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('article_id')->unsigned();
-            $table->string('user_name');
-            $table->text('description')->nullable();
-            $table->timestamps();
+            $table->string('name',30)->nullable();
+            $table->text('comment')->nullable();
+            $table->timestamps('');
 
             $table->foreign('article_id')
                 ->references('id')
@@ -28,13 +22,8 @@ class CommentsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        Schema::dropIfExists('comments');
     }
 }

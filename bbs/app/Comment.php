@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     protected $fillable = [
-        'name','description'
+        'article_id',
+        'name',
+        'comment',
     ];
     public function article()
     {
@@ -23,5 +25,5 @@ class Comment extends Model
     {
         return $this->hasMany('App\Reply');
     }
-    
+
 }
